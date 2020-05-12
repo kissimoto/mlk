@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morphine/Lidocaine/Ketamine MLK Calculator</title>
+    <link href="mlk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  
+        <h1>IV Fluid Bag Based CRI Infusions</h1>
+        <!-- <h3>Based on Morphine @ 30mg/ml</h3> --> 
+    <div class='main'>
+
+<table style="width:50%">  
+  <tr>
+    <td><label for=weight>Animal's weight</label></td>
+    <td> <input type=number  id=weight required value='' placeholder='kg'></td>
+  </tr>
+  <tr>
+    <td><label for=fluidRate>Enter Fluid Rate</label></td>
+    <td><input type='number' id=fluidRate required value='' placeholder='ml/kg/hr'></td>      
+  </tr>
+  <tr>
+    <td><label for=morphDose>Morphine <span>  0.12 - 0.36 mg/kg/hr (2 - 6 ug/kg/min)</span></label></td>
+    <td> <input type=number  id=morphDose required value='' placeholder='mg/kg/hr'></td> 
+  </tr>
+  <tr>
+    <td><label for=lidoDose>Lidocaine <span>  0.6 - 3.0 mg/kg/hr (10 - 50 ug/kg/min)</span></label></td>
+    <td><input type=number  id=lidoDose required value='' placeholder='mg/kg/hr'></td>  
+  </tr>
+  <tr>
+    <td><label for=ketaDose>Ketamine<span>  0.12 - 1.2 mg/kg/hr (2 - 20 ug/kg/min)</span></label></td>
+    <td> <input type=number  id=ketaDose required value='' placeholder='mg/kg/hr'></td>   
+  </tr>
+  <tr>
+    <td><label for=bagSize>IV Fluid Bag Size in ml</label></td>
+    <td><select id=bagSize>
+      <option value='250'>250 ml</option>
+      <option value='500'>500 ml</option>
+      <option value='1000'>1000 ml</option>
+  </select></td>   
+  </tr>
+  <tr>
+    <td><label for=morphCon>Morphine Concentration</label></td>
+    <td> <select id=morphCon>
+      <option value='10'>10 mg</option>
+      <option value='30'>30 mg</option>
+      </select></td>   
+  </tr>
+  <tr>
+    <td><label for=lidoCon>Lidocaine Concentration</label></td>
+    <td> <select id=lidoCon>
+      <option value='10'>10 mg</option>
+      <option value='20'>20 mg</option>
+      </select></td>
+  </tr>
+</table>
+
+        <br>  
+        <button onclick=mlkprocess() id='submitbutton' onkeypress = this.onclick ()>Calculate</button>
+        
+    </div>
+        <div id=result>
+    </div> 
+   
+<script src=mlk.js></script>
+
+</body>
+</html>
