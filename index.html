@@ -23,7 +23,8 @@
   </tr>
   <tr>
     <td><label for=morphDose>Morphine <span>  0.12 - 0.36 mg/kg/hr (2 - 6 ug/kg/min)</span></label></td>
-    <td> <input type=number  id=morphDose required value='' placeholder='mg/kg/hr'></td> 
+    <td> <input type=number id=morphDose required value='' placeholder='mg/kg/hr'></td> 
+    
   </tr>
   <tr>
     <td><label for=lidoDose>Lidocaine <span>  0.6 - 3.0 mg/kg/hr (10 - 50 ug/kg/min)</span></label></td>
@@ -55,15 +56,20 @@
       <option value='20'>20 mg</option>
       </select></td>
   </tr>
+  <tr>
+    <td><label for=ketamineconcentration>Ketamine Concentration (100 mg/ml)</label></td>
+  </tr>
 </table>
 
         <br>  
         <button onclick=mlkprocess() id='submitbutton' onkeypress = this.onclick ()>Calculate</button>
+        <button onclick="refresh()" id='refreshButton'>Clear All</button>
         
     </div>
-        <div id=result>
-    </div> 
-   
+        <div id=result></div> 
+        <p id="error"></p>
+        <p id="error2"></p>
+        <p id="error3"></p>
 <script src=mlk.js></script>
 
 </body>
