@@ -15,24 +15,24 @@
 <table style="width:50%">  
   <tr>
     <td><label for=weight>Animal weight (kg)</label></td>
-    <td> <input type=number  id=weight required value='' placeholder='kg'></td>
+    <td> <input type=number pattern="\d+" min="0.01" max="100" step="0.01" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && event.charCode >= 48 && event.charCode <= 57" id=weight required value='' placeholder='kg'></td>
   </tr>
   <tr>
     <td><label for=fluidRate>Fluid Rate (ml/kg/hr)</label></td>
-    <td><input type='number' id=fluidRate required value='' placeholder='ml/kg/hr'></td>      
+    <td><input type='number' pattern="\d+" step="0.01" id=fluidRate onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && event.charCode >= 48 && event.charCode <= 57"  required value='' placeholder='ml/kg/hr'></td>      
   </tr>
   <tr>
     <td><label for=morphDose>Morphine <span>  0.12 - 0.36 mg/kg/hr (2 - 6 ug/kg/min)</span></label></td>
-    <td> <input type=number id=morphDose required value='' placeholder='mg/kg/hr'></td> 
+    <td> <input type=number pattern="\d+" step="0.01" id=morphDose onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && event.charCode >= 48 && event.charCode <= 57" required value='' placeholder='mg/kg/hr'></td> 
     
   </tr>
   <tr>
     <td><label for=lidoDose>Lidocaine <span>  0.6 - 3.0 mg/kg/hr (10 - 50 ug/kg/min)</span></label></td>
-    <td><input type=number  id=lidoDose required value='' placeholder='mg/kg/hr'></td>  
+    <td><input type=number  pattern="\d+" step="0.01" id=lidoDose onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && event.charCode >= 48 && event.charCode <= 57" required value='' placeholder='mg/kg/hr'></td>  
   </tr>
   <tr>
     <td><label for=ketaDose>Ketamine<span>  0.12 - 1.2 mg/kg/hr (2 - 20 ug/kg/min)</span></label></td>
-    <td> <input type=number  id=ketaDose required value='' placeholder='mg/kg/hr'></td>   
+    <td> <input type=number pattern="\d+" step="0.1" id=ketaDose onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 46 && event.charCode >= 48 && event.charCode <= 57" required value='' placeholder='mg/kg/hr'></td>   
   </tr>
   <tr>
     <td><label for=bagSize>IV Fluid Bag Size (ml)</label></td>
@@ -63,7 +63,7 @@
 
         <br>  
         <button onclick=mlkprocess() id='submitbutton' onkeypress = this.onclick ()>Calculate</button>
-        <button onclick="refresh()" id='refreshButton'>Clear All</button>
+        <button onclick="refresh()" id='refreshButton'>Reset Value</button>
         
     </div>
         <div id=result></div> 
