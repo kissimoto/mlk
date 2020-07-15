@@ -1,6 +1,6 @@
 
 
-function mlkprocess(limit){
+function mlkprocess(){
 
 
     const weight = document.getElementById('weight').value
