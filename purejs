@@ -2,7 +2,6 @@
 
 function mlkprocess(){
 
-
     const weight = document.getElementById('weight').value
     const fluidRate = document.getElementById('fluidRate').value
     const morphine = document.getElementById('morphDose').value
@@ -94,19 +93,17 @@ function mlkprocess(){
     document.getElementById('result').innerHTML = "Fluid rate = " + fluidRateWeight +" ml/hour <br> Morphine = "  + (Math.round(morphDrugVol * 100) / 100).toFixed(2) + " ml <br> Lidocaine = " 
     + (Math.round(lidoDrugVol * 100) / 100).toFixed(2) + " ml <br> Ketamine = " + (Math.round(ketaDrugVol * 100) / 100).toFixed(2) + " ml <br> Remove " +
     (Math.round(alldrugs * 100) / 100).toFixed(2) + " ml from IV bag <br> and replace fluid with the drugs."
-    document.getElementById("error").innerHTML=""
-    document.getElementById("error2").innerHTML=""
-    document.getElementById("error3").innerHTML=""
+    error.innerHTML=""
+    error2.innerHTML=""
+    error3.innerHTML=""
 }
 
 function refresh() {
-    document.getElementById("morphDose").value=""
-    document.getElementById("lidoDose").value=""
-    document.getElementById("ketaDose").value=""
-    document.getElementById("error").innerHTML=""
-    document.getElementById("error2").innerHTML=""
-    document.getElementById("error3").innerHTML=""
-    document.getElementById("result").innerHTML=""
+    morphDose.value=""
+    lidoDose.value=""
+    ketaDose.value=""
+    error.innerHTML=""
+    error2.innerHTML=""
+    error3.innerHTML=""
+    result.innerHTML=""
   }
-
-  
