@@ -1,40 +1,42 @@
 
 
-function mlkprocess(){
+function mlkprocess(limit){
+
 
     const weight = document.getElementById('weight').value
     const fluidRate = document.getElementById('fluidRate').value
     const morphine = document.getElementById('morphDose').value
+    const lidocaine = document.getElementById('lidoDose').value
+    const ketamine = document.getElementById('ketaDose').value
     
     if (morphine > 0.36) {
-        document.getElementById("error").innerHTML = "Morphine is too high<br>Press 'Clear All' and start again"
-        return document.getElementById("morphDose").value = ""   
-      
+        error.innerHTML = "Morphine is too high<br>Press 'Clear All' and start again"
+        return morphDose.value = "" 
+        
     } 
-      if (morphine < 0.12) {
-          document.getElementById("error").innerHTML = "Morphine is too low<br>Press 'Clear All' and start again"
-          return document.getElementById("morphDose").value = ""       
+     else if (morphine < 0.12) {
+          error.innerHTML = "Morphine is too low<br>Press 'Clear All' and start again"
+          return morphDose.value = ""       
     }
 
-    const lidocaine = document.getElementById('lidoDose').value
-    if (lidocaine > 3) {
-        document.getElementById("error2").innerHTML = "Lidocaine is too high<br>Press 'Clear All' and start again"
-        return document.getElementById("lidoDose").value = ""       
+    else if (lidocaine > 3) {
+        error2.innerHTML = "Lidocaine is too high<br>Press 'Clear All' and start again"
+        return lidoDose.value = ""       
        }
 
-     if (lidocaine < 0.6) {
-          document.getElementById("error2").innerHTML = "Lidocaine is too low<br>Press 'Clear All' and start again"
-          return document.getElementById("lidoDose").value = ""
+     else if (lidocaine < 0.6) {
+          error2.innerHTML = "Lidocaine is too low<br>Press 'Clear All' and start again"
+          return lidoDose.value = ""
                 }
-  
-    const ketamine = document.getElementById('ketaDose').value
-    if (ketamine > 1.2) {
-        document.getElementById("error3").innerHTML = "Ketamine is too high<br>Press 'Clear All' and start again"
-        return document.getElementById("ketaDose").value = ""   
+
+    
+    else if (ketamine > 1.2) {
+        error3.innerHTML = "Ketamine is too high<br>Press 'Clear All' and start again"
+        return ketaDose.value = ""   
        }
-       if (ketamine < 0.12) {
-          document.getElementById("error3").innerHTML = "Ketamine is too low<br>Press 'Clear All' and start again"
-           return document.getElementById("ketaDose").value = ""
+      else if (ketamine < 0.12) {
+          error3.innerHTML = "Ketamine is too low<br>Press 'Clear All' and start again"
+           return ketaDose.value = ""
     }
 
     const bagSize = document.getElementById('bagSize')
