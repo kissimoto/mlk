@@ -9,38 +9,43 @@ function mlkprocess(){
     const ketamine = document.getElementById('ketaDose').value
     
     if (morphine > 0.36) {
-        error.innerHTML = "Morphine is too high<br>Press 'Clear All' and start again"
+        error.innerHTML = "Morphine is too high<br>Press 'Reset Value' and start again"
          morphDose.value = "" 
          return false;
         
-    } 
-      if (morphine < 0.12) {
-          error.innerHTML = "Morphine is too low<br>Press 'Clear All' and start again"
+    } else if (morphine < 0.12) {
+          error.innerHTML = "Morphine is too low<br>Press 'Reset Value' and start again"
           morphDose.value = ""  
           return false;     
+    } else {
+        error.innerHTML = "Morphine value is now correct"
+    
     }
 
      if (lidocaine > 3) {
-        error2.innerHTML = "Lidocaine is too high<br>Press 'Clear All' and start again"
+        error2.innerHTML = "Lidocaine is too high<br>Press 'Reset Value' and start again"
         lidoDose.value = ""  
         return false;     
-       }
-
-      if (lidocaine < 0.6) {
-          error2.innerHTML = "Lidocaine is too low<br>Press 'Clear All' and start again"
+    } else if (lidocaine < 0.6) {
+          error2.innerHTML = "Lidocaine is too low<br>Press 'Reset Value' and start again"
           lidoDose.value = ""
           return false;
-                }
+    
+        } else {
+        error2.innerHTML = "Lidocaine value is now correct"    
+    }
     
      if (ketamine > 1.2) {
-        error3.innerHTML = "Ketamine is too high<br>Press 'Clear All' and start again"
+        error3.innerHTML = "Ketamine is too high<br>Press 'Reset Value' and start again"
         ketaDose.value = ""  
         return false; 
-       }
-       if (ketamine < 0.12) {
-          error3.innerHTML = "Ketamine is too low<br>Press 'Clear All' and start again"
+       
+    } else if (ketamine < 0.12) {
+          error3.innerHTML = "Ketamine is too low<br>Press 'Reset Value' and start again"
           ketaDose.value = ""
           return false;
+    } else {
+        error3.innerHTML = "Ketamine value is now correct" 
     }
 
     const bagSize = document.getElementById('bagSize')
