@@ -10,32 +10,37 @@ function mlkprocess(){
     
     if (morphine > 0.36) {
         error.innerHTML = "Morphine is too high<br>Press 'Clear All' and start again"
-        return morphDose.value = "" 
+         morphDose.value = "" 
+         return false;
         
     } 
-     else if (morphine < 0.12) {
+      if (morphine < 0.12) {
           error.innerHTML = "Morphine is too low<br>Press 'Clear All' and start again"
-          return morphDose.value = ""       
+          morphDose.value = ""  
+          return false;     
     }
 
-    else if (lidocaine > 3) {
+     if (lidocaine > 3) {
         error2.innerHTML = "Lidocaine is too high<br>Press 'Clear All' and start again"
-        return lidoDose.value = ""       
+        lidoDose.value = ""  
+        return false;     
        }
 
-     else if (lidocaine < 0.6) {
+      if (lidocaine < 0.6) {
           error2.innerHTML = "Lidocaine is too low<br>Press 'Clear All' and start again"
-          return lidoDose.value = ""
+          lidoDose.value = ""
+          return false;
                 }
-
     
-    else if (ketamine > 1.2) {
+     if (ketamine > 1.2) {
         error3.innerHTML = "Ketamine is too high<br>Press 'Clear All' and start again"
-        return ketaDose.value = ""   
+        ketaDose.value = ""  
+        return false; 
        }
-      else if (ketamine < 0.12) {
+       if (ketamine < 0.12) {
           error3.innerHTML = "Ketamine is too low<br>Press 'Clear All' and start again"
-           return ketaDose.value = ""
+          ketaDose.value = ""
+          return false;
     }
 
     const bagSize = document.getElementById('bagSize')
